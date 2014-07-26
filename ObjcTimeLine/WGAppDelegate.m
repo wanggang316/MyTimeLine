@@ -7,6 +7,10 @@
 //
 
 #import "WGAppDelegate.h"
+#import "WGRootViewController.h"
+#import "iflyMSC/iflySetting.h"
+#import <Parse/Parse.h>
+
 
 @implementation WGAppDelegate
 
@@ -14,6 +18,30 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+//    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"12345678"];
+//    [IFlySpeechUtility createUtility:initString];
+    
+    [Parse setApplicationId:@"WRYXVBhjqWDSXiaPsPvpgjOqCCqKkDaFIJjZa0El"
+                  clientKey:@"koEecnW09C4GRvIOh4t7vFD3UulVUR9aF4hWJDWU"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
+    [IFlySetting setLogFile:LVL_ALL];
+    [IFlySetting showLogcat:YES];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [paths objectAtIndex:0];
+    [IFlySetting setLogFilePath:cachePath];
+
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[[WGRootViewController alloc]init]];
+    
+    self.window.rootViewController = navigationController;
+    
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
