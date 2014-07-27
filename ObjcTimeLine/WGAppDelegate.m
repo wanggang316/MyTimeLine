@@ -9,7 +9,7 @@
 #import "WGAppDelegate.h"
 #import "WGRootViewController.h"
 #import "iflyMSC/iflySetting.h"
-#import <Parse/Parse.h>
+#import <AVOSCloud/AVOSCloud.h>
 
 
 @implementation WGAppDelegate
@@ -19,16 +19,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-//    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"12345678"];
-//    [IFlySpeechUtility createUtility:initString];
-    
-    [Parse setApplicationId:@"WRYXVBhjqWDSXiaPsPvpgjOqCCqKkDaFIJjZa0El"
-                  clientKey:@"koEecnW09C4GRvIOh4t7vFD3UulVUR9aF4hWJDWU"];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    [AVOSCloud setApplicationId:@"xgeduaupbz9dp61n0oly7b1khcugr0tx5oj1193wd9zlrpao"
+                      clientKey:@"phlxvsq4mnares39lqbz6ebas6fub81vgb90wlk7i5y0skde"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+   
     
     [IFlySetting setLogFile:LVL_ALL];
     [IFlySetting showLogcat:YES];

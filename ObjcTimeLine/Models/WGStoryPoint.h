@@ -10,11 +10,14 @@
 
 @interface WGStoryPoint : NSObject
 
+@property (nonatomic, strong, readonly) NSDate *date;
 
-@property (nonatomic, strong, readonly) NSDate *time;
+@property (nonatomic, copy, readonly) NSString *time;
 @property (nonatomic, copy, readonly) NSString *text;
 
-- (id)initWithTime:(NSDate *)aTime
+- (id)initWithDate:(NSDate *)aDate
               text:(NSString *)aText;
+
+- (id)initWithText:(NSString *)aText;
 
 @end

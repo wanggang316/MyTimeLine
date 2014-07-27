@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D61CDA3319839E3500513DD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3219839E3500513DD5 /* CoreLocation.framework */; };
-		D61CDA3519839E4000513DD5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */; };
-		D61CDA3719839E4E00513DD5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3619839E4E00513DD5 /* Security.framework */; };
 		D61CDA3919839E5800513DD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3819839E5800513DD5 /* StoreKit.framework */; };
-		D61CDA3C19839E8200513DD5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3B19839E8200513DD5 /* Parse.framework */; };
-		D61CDA3D19839F3100513DD5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3019839E2800513DD5 /* CFNetwork.framework */; };
 		D61CDA3F1983A14200513DD5 /* WGTimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA3E1983A14200513DD5 /* WGTimePoint.swift */; };
 		D61CDA411984047500513DD5 /* WGTimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA401984047500513DD5 /* WGTimeEngine.swift */; };
 		D61CDA441984050200513DD5 /* WGStoryPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA431984050200513DD5 /* WGStoryPoint.m */; };
 		D61CDA47198405B500513DD5 /* WGStoryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA46198405B500513DD5 /* WGStoryEngine.m */; };
-		D675E6CB19829ACF0070038B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6CA19829ACF0070038B /* Foundation.framework */; };
+		D656556219851696005EF0F2 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556119851696005EF0F2 /* AVOSCloud.framework */; };
+		D65655631985172F005EF0F2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */; };
+		D656556519851744005EF0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556419851744005EF0F2 /* CoreTelephony.framework */; };
+		D656556819853F45005EF0F2 /* WGStoryDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D656556719853F45005EF0F2 /* WGStoryDay.m */; };
+		D66DF2E21984D93C00BD7BD2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3219839E3500513DD5 /* CoreLocation.framework */; };
+		D66DF2E41984D96D00BD7BD2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3619839E4E00513DD5 /* Security.framework */; };
 		D675E6CD19829ACF0070038B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6CC19829ACF0070038B /* CoreGraphics.framework */; };
 		D675E6CF19829ACF0070038B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6CE19829ACF0070038B /* UIKit.framework */; };
 		D675E6D519829ACF0070038B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D675E6D319829ACF0070038B /* InfoPlist.strings */; };
@@ -35,14 +35,16 @@
 		D675E70019829B0A0070038B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6FF19829B0A0070038B /* AudioToolbox.framework */; };
 		D675E70219829B1B0070038B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E70119829B1B0070038B /* libz.dylib */; };
 		D675E70919829BD50070038B /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E70819829BD50070038B /* iflyMSC.framework */; };
-		D675E70B19829BFB0070038B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E70A19829BFB0070038B /* QuartzCore.framework */; };
 		D675E72C19829F410070038B /* WGRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D675E72B19829F410070038B /* WGRootViewController.m */; };
 		D675E73419829F9C0070038B /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D675E72F19829F9C0070038B /* AlertView.m */; };
 		D675E73519829F9C0070038B /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D675E73119829F9C0070038B /* PopupView.m */; };
 		D675E73619829F9C0070038B /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D675E73319829F9C0070038B /* UIPlaceHolderTextView.m */; };
+		D67ACCA11985065700C2FD6D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D67ACCA01985065700C2FD6D /* libicucore.dylib */; };
 		D6845FB21982C50E00747331 /* valio.json in Resources */ = {isa = PBXBuildFile; fileRef = D6845FB11982C50E00747331 /* valio.json */; };
 		D6845FFB19834D0900747331 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6845FF919834D0900747331 /* ItemTableViewCell.swift */; };
 		D6845FFC19834D0900747331 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6845FFA19834D0900747331 /* SectionHeaderView.swift */; };
+		D6C4F6711985100900E38603 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3019839E2800513DD5 /* CFNetwork.framework */; };
+		D6C4F6721985101600E38603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6CA19829ACF0070038B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +63,16 @@
 		D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D61CDA3619839E4E00513DD5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D61CDA3819839E5800513DD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		D61CDA3B19839E8200513DD5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D61CDA3E1983A14200513DD5 /* WGTimePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGTimePoint.swift; sourceTree = "<group>"; };
 		D61CDA401984047500513DD5 /* WGTimeEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGTimeEngine.swift; sourceTree = "<group>"; };
 		D61CDA421984050200513DD5 /* WGStoryPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryPoint.h; sourceTree = "<group>"; };
 		D61CDA431984050200513DD5 /* WGStoryPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryPoint.m; sourceTree = "<group>"; };
 		D61CDA45198405B500513DD5 /* WGStoryEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryEngine.h; sourceTree = "<group>"; };
 		D61CDA46198405B500513DD5 /* WGStoryEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryEngine.m; sourceTree = "<group>"; };
+		D656556119851696005EF0F2 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		D656556419851744005EF0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D656556619853F45005EF0F2 /* WGStoryDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryDay.h; sourceTree = "<group>"; };
+		D656556719853F45005EF0F2 /* WGStoryDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryDay.m; sourceTree = "<group>"; };
 		D675E6C719829ACF0070038B /* ObjcTimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D675E6CA19829ACF0070038B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D675E6CC19829ACF0070038B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +105,7 @@
 		D675E73119829F9C0070038B /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
 		D675E73219829F9C0070038B /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		D675E73319829F9C0070038B /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		D67ACCA01985065700C2FD6D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		D6845FB11982C50E00747331 /* valio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = valio.json; sourceTree = "<group>"; };
 		D6845FF819834CCD00747331 /* ObjcTimeLine-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjcTimeLine-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6845FF919834D0900747331 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,22 +117,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D675E6CB19829ACF0070038B /* Foundation.framework in Frameworks */,
-				D61CDA3D19839F3100513DD5 /* CFNetwork.framework in Frameworks */,
+				D656556519851744005EF0F2 /* CoreTelephony.framework in Frameworks */,
+				D65655631985172F005EF0F2 /* MobileCoreServices.framework in Frameworks */,
+				D6C4F6721985101600E38603 /* Foundation.framework in Frameworks */,
+				D6C4F6711985100900E38603 /* CFNetwork.framework in Frameworks */,
+				D675E6CF19829ACF0070038B /* UIKit.framework in Frameworks */,
+				D66DF2E41984D96D00BD7BD2 /* Security.framework in Frameworks */,
+				D675E6FE19829AFF0070038B /* SystemConfiguration.framework in Frameworks */,
+				D66DF2E21984D93C00BD7BD2 /* CoreLocation.framework in Frameworks */,
 				D61CDA3919839E5800513DD5 /* StoreKit.framework in Frameworks */,
-				D61CDA3719839E4E00513DD5 /* Security.framework in Frameworks */,
-				D61CDA3519839E4000513DD5 /* MobileCoreServices.framework in Frameworks */,
-				D61CDA3319839E3500513DD5 /* CoreLocation.framework in Frameworks */,
-				D675E70B19829BFB0070038B /* QuartzCore.framework in Frameworks */,
-				D61CDA3C19839E8200513DD5 /* Parse.framework in Frameworks */,
 				D675E6CD19829ACF0070038B /* CoreGraphics.framework in Frameworks */,
 				D675E70219829B1B0070038B /* libz.dylib in Frameworks */,
+				D67ACCA11985065700C2FD6D /* libicucore.dylib in Frameworks */,
 				D675E70019829B0A0070038B /* AudioToolbox.framework in Frameworks */,
-				D675E6FE19829AFF0070038B /* SystemConfiguration.framework in Frameworks */,
 				D675E6FC19829AF50070038B /* AddressBook.framework in Frameworks */,
 				D675E6FA19829AEA0070038B /* AVFoundation.framework in Frameworks */,
 				D675E70919829BD50070038B /* iflyMSC.framework in Frameworks */,
-				D675E6CF19829ACF0070038B /* UIKit.framework in Frameworks */,
+				D656556219851696005EF0F2 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,16 +159,10 @@
 				D61CDA431984050200513DD5 /* WGStoryPoint.m */,
 				D61CDA45198405B500513DD5 /* WGStoryEngine.h */,
 				D61CDA46198405B500513DD5 /* WGStoryEngine.m */,
+				D656556619853F45005EF0F2 /* WGStoryDay.h */,
+				D656556719853F45005EF0F2 /* WGStoryDay.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D61CDA3A19839E7900513DD5 /* parse */ = {
-			isa = PBXGroup;
-			children = (
-				D61CDA3B19839E8200513DD5 /* Parse.framework */,
-			);
-			path = parse;
 			sourceTree = "<group>";
 		};
 		D675E6BE19829ACF0070038B = {
@@ -186,6 +187,8 @@
 		D675E6C919829ACF0070038B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D656556419851744005EF0F2 /* CoreTelephony.framework */,
+				D67ACCA01985065700C2FD6D /* libicucore.dylib */,
 				D61CDA3819839E5800513DD5 /* StoreKit.framework */,
 				D61CDA3619839E4E00513DD5 /* Security.framework */,
 				D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */,
@@ -259,7 +262,7 @@
 		D675E70319829B500070038B /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				D61CDA3A19839E7900513DD5 /* parse */,
+				D656556119851696005EF0F2 /* AVOSCloud.framework */,
 				D675E70719829BD50070038B /* lib */,
 			);
 			path = Vendors;
@@ -400,6 +403,7 @@
 				D6845FFC19834D0900747331 /* SectionHeaderView.swift in Sources */,
 				D675E6DB19829ACF0070038B /* WGAppDelegate.m in Sources */,
 				D675E6D719829ACF0070038B /* main.m in Sources */,
+				D656556819853F45005EF0F2 /* WGStoryDay.m in Sources */,
 				D6845FFB19834D0900747331 /* ItemTableViewCell.swift in Sources */,
 				D61CDA47198405B500513DD5 /* WGStoryEngine.m in Sources */,
 			);
@@ -475,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -507,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -523,7 +527,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/lib",
-					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/parse",
+					"$(PROJECT_DIR)/ObjcTimeLine/Vendors",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjcTimeLine/ObjcTimeLine-Prefix.pch";
@@ -547,7 +551,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/lib",
-					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/parse",
+					"$(PROJECT_DIR)/ObjcTimeLine/Vendors",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjcTimeLine/ObjcTimeLine-Prefix.pch";

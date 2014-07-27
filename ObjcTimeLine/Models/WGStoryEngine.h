@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WGStoryPoint.h"
+#import "WGStoryDay.h"
+
+typedef void (^WGSaveBlock)(BOOL succeeded, NSError *error);
+typedef void (^WGResultBlock)(NSArray *objects, NSError *error);
 
 @interface WGStoryEngine : NSObject
 
+- (void)saveAPoint:(WGStoryPoint *)point completion:(WGSaveBlock)completionHandler;
 
+
+- (void)allTimePoints:(WGResultBlock)completionHandler;
 
 @end

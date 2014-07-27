@@ -14,6 +14,8 @@
 #import "iflyMSC/IFlyRecognizerView.h"
 #import "PopupView.h"
 #import "ObjcTimeLine-Swift.h"
+#import "WGStoryEngine.h"
+
 
 
 @class ItemTableViewCell;
@@ -24,6 +26,8 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
 
 @property (strong, nonatomic) UITableView *timeLineTableView;
 @property (strong, nonatomic) NSArray *dataSource;
+
+@property (strong, nonatomic) WGStoryEngine *engine;
 
 @end
 
@@ -52,9 +56,14 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-//    [self setupRecognizer];
+    
+    
+    
+    
+    [self setupRecognizer];
     
     [self.view addSubview:self.timeLineTableView];
+    [self loadData];
 }
 
 
@@ -64,15 +73,27 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
     [super viewWillDisappear:animated];
 }
 
-- (NSArray *)dataSource {
+- (void)loadData {
 
-    if (!_dataSource) {
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"valio" ofType:@"json"];
-        NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
-        _dataSource = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    }
-    return _dataSource;
     
+        [self.engine allTimePoints:^(NSArray *objects, NSError *error) {
+            _dataSource = objects;
+            [self.timeLineTableView reloadData];
+        }];
+        
+        
+//        NSString *path = [[NSBundle mainBundle]pathForResource:@"valio" ofType:@"json"];
+//        NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:nil];
+//        _dataSource = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+   
+    
+}
+
+- (WGStoryEngine *)engine {
+    if (!_engine) {
+        _engine = [[WGStoryEngine alloc]init];
+    }
+    return _engine;
 }
 
 - (UITableView *)timeLineTableView {
@@ -90,12 +111,17 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
 
 
 - (void)setupRecognizer {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(130, 400, 60, 50);
-    [button setTitle:@"开始识别" forState:UIControlStateNormal];
-    [button setTitle:@"开始识别" forState:UIControlStateSelected];
-    [button addTarget:self action:@selector(startListenning:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(startListenning:)];
+    self.navigationItem.rightBarButtonItem = btn;
+//    
+//    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+//    button.frame = CGRectMake(130, 400, 60, 50);
+//    [button setTitle:@"开始识别" forState:UIControlStateNormal];
+//    [button setTitle:@"开始识别" forState:UIControlStateSelected];
+//    [button addTarget:self action:@selector(startListenning:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
     
     _popView = [[PopupView alloc] initWithFrame:CGRectMake(100, 300, 0, 0)];
     _popView.ParentView = self.view;
@@ -134,12 +160,23 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
  */
 - (void)onResult:(NSArray *)resultArray isLast:(BOOL)isLast
 {
-    NSMutableString *result = [[NSMutableString alloc] init];
-    NSDictionary *dic = [resultArray objectAtIndex:0];
-    for (NSString *key in dic) {
-        [result appendFormat:@"%@",key];
+
+    if (!isLast) { //非标点符号
+        NSMutableString *result = [[NSMutableString alloc] init];
+        NSDictionary *dic = [resultArray objectAtIndex:0];
+        for (NSString *key in dic) {
+            [result appendFormat:@"%@",key];
+        }
+        NSLog(@"------>%@",result);
+        
+        WGStoryPoint *point = [[WGStoryPoint alloc]initWithText:result];
+        [self.engine saveAPoint:point completion:^(BOOL succeeded, NSError *error) {
+            [self loadData];
+        }];
+        
+        
+        
     }
-    NSLog(@"------>%@",result);
  }
 
 /** 识别结束回调方法
@@ -164,22 +201,22 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSDictionary *day = [self.dataSource objectAtIndex:section];
-    NSArray *items = [day objectForKey:@"items"];
-    return items.count;
+    WGStoryDay *day = [self.dataSource objectAtIndex:section];
+    NSArray *points = day.storyPoints;
+    return points.count;
     
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     ItemTableViewCell *cell = (ItemTableViewCell *)[tableView dequeueReusableCellWithIdentifier:TimeCellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *day = [self.dataSource objectAtIndex:indexPath.section];
-    NSArray *items = [day objectForKey:@"items"];
-    NSDictionary *item = [items objectAtIndex:indexPath.row];
+    WGStoryDay *day = [self.dataSource objectAtIndex:indexPath.section];
+    NSArray *points = day.storyPoints;
+    WGStoryPoint *point = [points objectAtIndex:indexPath.row];
     
-    cell.titleLabel.text = [item objectForKey:@"title"];
-    cell.timeLabel.text = [item objectForKey:@"time"];
-    BOOL minor = (BOOL)[item objectForKey:@"minor"];
+    cell.titleLabel.text = point.text;
+    cell.timeLabel.text = point.time;
+    BOOL minor = YES;
     if (minor) {
         cell.minor = minor;
     } else {
@@ -194,14 +231,14 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 
-    NSDictionary *day = [self.dataSource objectAtIndex:section];
-    return [day objectForKey:@"title"];
+    WGStoryDay *day = [self.dataSource objectAtIndex:section];
+    return day.title;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-    NSDictionary *day = [self.dataSource objectAtIndex:section];
+    WGStoryDay *day = [self.dataSource objectAtIndex:section];
     SectionHeaderView *view = [[SectionHeaderView alloc]init];
-    view.titleLabel.text = [[day objectForKey:@"title"] uppercaseString];
+    view.titleLabel.text = day.title;
     return view;
     
 }
