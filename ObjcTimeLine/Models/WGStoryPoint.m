@@ -27,13 +27,8 @@
         NSCalendar *cal = [NSCalendar currentCalendar];
         unsigned int unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekCalendarUnit;
         NSDateComponents *dd = [cal components:unitFlags fromDate:aDate];
-        NSInteger year = [dd year];
-        NSInteger month = [dd month];
-        NSInteger day = [dd day];
         NSInteger hour = [dd hour];
         NSInteger min = [dd minute];
-        NSInteger sec = [dd second];
-        NSInteger weekDay = [dd weekday];
         
         self.date = aDate;
         self.time = [NSString stringWithFormat:@"%d:%d",hour,min];

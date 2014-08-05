@@ -184,8 +184,8 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
  */
 - (void)onError:(IFlySpeechError *)error
 {
-    [self.view addSubview:_popView];
-    [_popView setText:[NSString stringWithFormat:@"识别结束,错误码:%d",[error errorCode]]];
+//    [self.view addSubview:_popView];
+//    [_popView setText:[NSString stringWithFormat:@"识别结束,错误码:%d",[error errorCode]]];
     NSLog(@"errorCode:%d",[error errorCode]);
 }
 
@@ -216,7 +216,7 @@ static NSString * const TimeCellIdentifier = @"TimeCellIdentifier";
     
     cell.titleLabel.text = point.text;
     cell.timeLabel.text = point.time;
-    BOOL minor = YES;
+    BOOL minor = NO;
     if (minor) {
         cell.minor = minor;
     } else {

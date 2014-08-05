@@ -24,7 +24,7 @@
 
 - (void)allTimePoints:(WGResultBlock)completionHandler {
     AVQuery *query = [AVQuery queryWithClassName:@"TimePoint"];
-    
+    [query addDescendingOrder:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         NSMutableArray *result = [NSMutableArray new];

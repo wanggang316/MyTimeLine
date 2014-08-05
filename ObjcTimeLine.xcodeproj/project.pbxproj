@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D61CDA3919839E5800513DD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3819839E5800513DD5 /* StoreKit.framework */; };
 		D61CDA3F1983A14200513DD5 /* WGTimePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA3E1983A14200513DD5 /* WGTimePoint.swift */; };
 		D61CDA411984047500513DD5 /* WGTimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA401984047500513DD5 /* WGTimeEngine.swift */; };
 		D61CDA441984050200513DD5 /* WGStoryPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA431984050200513DD5 /* WGStoryPoint.m */; };
 		D61CDA47198405B500513DD5 /* WGStoryEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D61CDA46198405B500513DD5 /* WGStoryEngine.m */; };
+		D62EB1DD198638C200B796BB /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556A1986286F005EF0F2 /* TencentOpenAPI.framework */; };
+		D62EB1DE198638CA00B796BB /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D65655691986286F005EF0F2 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		D62EB1E0198638FD00B796BB /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D62EB1DF198638FD00B796BB /* libstdc++.dylib */; };
 		D656556219851696005EF0F2 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556119851696005EF0F2 /* AVOSCloud.framework */; };
 		D65655631985172F005EF0F2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */; };
 		D656556519851744005EF0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556419851744005EF0F2 /* CoreTelephony.framework */; };
 		D656556819853F45005EF0F2 /* WGStoryDay.m in Sources */ = {isa = PBXBuildFile; fileRef = D656556719853F45005EF0F2 /* WGStoryDay.m */; };
+		D656556E198628AD005EF0F2 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556D198628AD005EF0F2 /* libiconv.dylib */; };
+		D6565570198628C5005EF0F2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D656556F198628C5005EF0F2 /* libsqlite3.dylib */; };
+		D656557419862DC7005EF0F2 /* WGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D656557219862DC7005EF0F2 /* WGLoginViewController.m */; };
+		D656557519862DC7005EF0F2 /* WGLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D656557319862DC7005EF0F2 /* WGLoginViewController.xib */; };
 		D66DF2E21984D93C00BD7BD2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3219839E3500513DD5 /* CoreLocation.framework */; };
 		D66DF2E41984D96D00BD7BD2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D61CDA3619839E4E00513DD5 /* Security.framework */; };
 		D675E6CD19829ACF0070038B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D675E6CC19829ACF0070038B /* CoreGraphics.framework */; };
@@ -62,17 +68,24 @@
 		D61CDA3219839E3500513DD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D61CDA3619839E4E00513DD5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D61CDA3819839E5800513DD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D61CDA3E1983A14200513DD5 /* WGTimePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGTimePoint.swift; sourceTree = "<group>"; };
 		D61CDA401984047500513DD5 /* WGTimeEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGTimeEngine.swift; sourceTree = "<group>"; };
 		D61CDA421984050200513DD5 /* WGStoryPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryPoint.h; sourceTree = "<group>"; };
 		D61CDA431984050200513DD5 /* WGStoryPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryPoint.m; sourceTree = "<group>"; };
 		D61CDA45198405B500513DD5 /* WGStoryEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryEngine.h; sourceTree = "<group>"; };
 		D61CDA46198405B500513DD5 /* WGStoryEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryEngine.m; sourceTree = "<group>"; };
+		D62EB1DF198638FD00B796BB /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		D656556119851696005EF0F2 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		D656556419851744005EF0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D656556619853F45005EF0F2 /* WGStoryDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGStoryDay.h; sourceTree = "<group>"; };
 		D656556719853F45005EF0F2 /* WGStoryDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGStoryDay.m; sourceTree = "<group>"; };
+		D65655691986286F005EF0F2 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		D656556A1986286F005EF0F2 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D656556D198628AD005EF0F2 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		D656556F198628C5005EF0F2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D656557119862DC7005EF0F2 /* WGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGLoginViewController.h; sourceTree = "<group>"; };
+		D656557219862DC7005EF0F2 /* WGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGLoginViewController.m; sourceTree = "<group>"; };
+		D656557319862DC7005EF0F2 /* WGLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WGLoginViewController.xib; sourceTree = "<group>"; };
 		D675E6C719829ACF0070038B /* ObjcTimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcTimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D675E6CA19829ACF0070038B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D675E6CC19829ACF0070038B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,15 +130,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D656556519851744005EF0F2 /* CoreTelephony.framework in Frameworks */,
-				D65655631985172F005EF0F2 /* MobileCoreServices.framework in Frameworks */,
+				D62EB1E0198638FD00B796BB /* libstdc++.dylib in Frameworks */,
+				D62EB1DD198638C200B796BB /* TencentOpenAPI.framework in Frameworks */,
 				D6C4F6721985101600E38603 /* Foundation.framework in Frameworks */,
 				D6C4F6711985100900E38603 /* CFNetwork.framework in Frameworks */,
+				D6565570198628C5005EF0F2 /* libsqlite3.dylib in Frameworks */,
+				D656556E198628AD005EF0F2 /* libiconv.dylib in Frameworks */,
+				D656556519851744005EF0F2 /* CoreTelephony.framework in Frameworks */,
+				D65655631985172F005EF0F2 /* MobileCoreServices.framework in Frameworks */,
 				D675E6CF19829ACF0070038B /* UIKit.framework in Frameworks */,
 				D66DF2E41984D96D00BD7BD2 /* Security.framework in Frameworks */,
 				D675E6FE19829AFF0070038B /* SystemConfiguration.framework in Frameworks */,
 				D66DF2E21984D93C00BD7BD2 /* CoreLocation.framework in Frameworks */,
-				D61CDA3919839E5800513DD5 /* StoreKit.framework in Frameworks */,
 				D675E6CD19829ACF0070038B /* CoreGraphics.framework in Frameworks */,
 				D675E70219829B1B0070038B /* libz.dylib in Frameworks */,
 				D67ACCA11985065700C2FD6D /* libicucore.dylib in Frameworks */,
@@ -187,9 +203,13 @@
 		D675E6C919829ACF0070038B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D62EB1DF198638FD00B796BB /* libstdc++.dylib */,
+				D656556F198628C5005EF0F2 /* libsqlite3.dylib */,
+				D656556D198628AD005EF0F2 /* libiconv.dylib */,
+				D65655691986286F005EF0F2 /* TencentOpenApi_IOS_Bundle.bundle */,
+				D656556A1986286F005EF0F2 /* TencentOpenAPI.framework */,
 				D656556419851744005EF0F2 /* CoreTelephony.framework */,
 				D67ACCA01985065700C2FD6D /* libicucore.dylib */,
-				D61CDA3819839E5800513DD5 /* StoreKit.framework */,
 				D61CDA3619839E4E00513DD5 /* Security.framework */,
 				D61CDA3419839E4000513DD5 /* MobileCoreServices.framework */,
 				D61CDA3219839E3500513DD5 /* CoreLocation.framework */,
@@ -220,6 +240,9 @@
 				D675E72A19829F410070038B /* WGRootViewController.h */,
 				D675E72B19829F410070038B /* WGRootViewController.m */,
 				D675E72919829ECB0070038B /* Definition.h */,
+				D656557119862DC7005EF0F2 /* WGLoginViewController.h */,
+				D656557219862DC7005EF0F2 /* WGLoginViewController.m */,
+				D656557319862DC7005EF0F2 /* WGLoginViewController.xib */,
 				D675E6DC19829ACF0070038B /* Images.xcassets */,
 				D6845FAA1982AAAD00747331 /* Cells */,
 				D675E72D19829F890070038B /* Views */,
@@ -344,6 +367,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = wwwlife;
 				TargetAttributes = {
+					D675E6C619829ACF0070038B = {
+						DevelopmentTeam = HC438T2B8P;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
 					D675E6E119829ACF0070038B = {
 						TestTargetID = D675E6C619829ACF0070038B;
 					};
@@ -372,6 +403,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62EB1DE198638CA00B796BB /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				D656557519862DC7005EF0F2 /* WGLoginViewController.xib in Resources */,
 				D675E6D519829ACF0070038B /* InfoPlist.strings in Resources */,
 				D6845FB21982C50E00747331 /* valio.json in Resources */,
 				D675E6DD19829ACF0070038B /* Images.xcassets in Resources */,
@@ -393,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D656557419862DC7005EF0F2 /* WGLoginViewController.m in Sources */,
 				D675E73419829F9C0070038B /* AlertView.m in Sources */,
 				D675E72C19829F410070038B /* WGRootViewController.m in Sources */,
 				D61CDA441984050200513DD5 /* WGStoryPoint.m in Sources */,
@@ -523,18 +557,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/lib",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjcTimeLine/ObjcTimeLine-Prefix.pch";
 				INFOPLIST_FILE = "ObjcTimeLine/ObjcTimeLine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ObjcTimeLine/ObjcTimeLine-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -547,18 +586,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors/lib",
 					"$(PROJECT_DIR)/ObjcTimeLine/Vendors",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjcTimeLine/ObjcTimeLine-Prefix.pch";
 				INFOPLIST_FILE = "ObjcTimeLine/ObjcTimeLine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ObjcTimeLine/ObjcTimeLine-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
